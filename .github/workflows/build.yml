@@ -12,7 +12,8 @@ jobs:
           distribution: temurin
           java-version: '25'
       - run: mvn -B clean package
+        working-directory: capybara-v4
       - uses: actions/upload-artifact@v4
         with:
           name: CapybaraScoreboard
-          path: target/CapybaraScoreboard-1.0.0.jar
+          path: capybara-v4/target/CapybaraScoreboard-1.0.0.jar
